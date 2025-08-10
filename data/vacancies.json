@@ -2059,5 +2059,410 @@
         "city": "Новосибирск",
         "requirement": "Опыт коммерческой работы с Python от 1 года. Уверенные знания Django и FastAPI. Опыт работы с MySQL и ClickHouse. ",
         "work_format": "Удалённо"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/159",
+        "salary_from": 450000,
+        "salary_to": 600000,
+        "city": "Астана",
+        "requirement": "Опыт разработки на Python Django Rest Framework, FastAPI, Flask, создание Rest API с помощью DRF, GraphQL, Channels websocket. ",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/160",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Алматы",
+        "requirement": "Высшее образование. Стаж работы не менее 1 года. Знание программ. Грамотная устная и письменная речь. Умение организовывать и выстраивать процессы. ",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1007",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Брест",
+        "requirement": "Опыт работы с JavaScript от 3-х лет. - Опыт разработки на React 18-19 от 3-х лет. - ",
+        "work_format": "Удалённо"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Стартовая зарплата не указана",
+        "salary_to": 450000,
+        "city": "Москва",
+        "requirement": "Коммерческий опыт работы Frontend-<highlighttext>разработчиком</highlighttext> не менее 5 лет. Уверенно знаете и владеете React, JavaScript и TypeScript. Стремитесь разобраться в...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": 140000,
+        "salary_to": "Итоговая зарплата не указана",
+        "city": "Москва",
+        "requirement": "Уверенные знания JavaScript (ES6+). Умение верстать с нуля адаптивные интерфейсы с поддержкой современных браузеров. Уверенные знания HTML, CSS...",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/2",
+        "salary_from": 50000,
+        "salary_to": 70000,
+        "city": "Санкт-Петербург",
+        "requirement": "Знание одного из объектно-ориентированного языка программирования, к примеру: C++\\C#, Delphi, Python, Pascal, 1С. Знание работы с СУБД...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Эти знания будут плюсом, но не обязательны: - Опыт работы с React Testing Library, Jest, Playwright. - Опыт работы с ApexCharts. - ",
+        "work_format": "Гибрид"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": 110000,
+        "salary_to": "Итоговая зарплата не указана",
+        "city": "Москва",
+        "requirement": "Уверенное знание Python 3. Знание Django, FastAPI или Flask. Понимание структуры REST API, опыт взаимодействия с внешними сервисами. ",
+        "work_format": "Гибрид"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": 170000,
+        "salary_to": 200000,
+        "city": "Москва",
+        "requirement": "Опыт работы back-end <highlighttext>разработчиком</highlighttext> от 2-х лет. Опыт разработки на Java 11 или выше. Знание Spring Framework (Spring...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Имеешь опыт разработки на .NET 6+ от 2 лет. Разбираешься в микросервисах, брокерах сообщений и распределённых системах. ",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Опыт разработки приложений на C# .NET 8/9 под Linux. Уверенное владение кроссплатформенными UI-фреймворками Avalonia или MAUI для Linux. ",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Уверенное знание Golang и навык применения SOLID. Опыт работы в Unix-окружении. Способность излагать мысли и структурировать информацию для коллег. ",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/88",
+        "salary_from": 75000,
+        "salary_to": "Итоговая зарплата не указана",
+        "city": "Казань",
+        "requirement": "Python - базовый уровень. Опыт написания REST приложений на каком-либо python фреймворке (Django / FastAPI / Flask). Базовый SQL. Опыт написания unit...",
+        "work_format": "Удалённо"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/88",
+        "salary_from": 40000,
+        "salary_to": 60000,
+        "city": "Казань",
+        "requirement": "Уверенное знание React и Ant Design - это основа нашей работы. - Опыт работы с amoCRM будет значительным преимуществом. - Знание Next.js, Vercel...",
+        "work_format": "Удалённо"
+    },
+    {
+        "name_vacancy": "Другое",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Опыт работы с VueJS не менее 3 лет. Уверенное владение HTML, CSS и препроцессорами CSS. Опыт адаптивной кроссбраузерной вёрстки. ",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Хорошие знания экосистемы Vue. Опыт работы с TypeScript.",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "За ответственность и четкость в работе. Разрабатывать адаптивный и отзывчивый UI/UX. Что хотим видеть: Опыт работы с React, TypeScript...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Опыт разработки на Java от 3-х лет. Понимание ООП, паттернов проектирования. Опыт разработки REST API, понимание протоколов HTTP/HTTPS. ",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/2",
+        "salary_from": 100000,
+        "salary_to": "Итоговая зарплата не указана",
+        "city": "Санкт-Петербург",
+        "requirement": "Опыт работы от 1 до 3 лет в разработке на Python. Знание FastAPI и Pydantic. Опыт работы с SQLAlchemy 2...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Стартовая зарплата не указана",
+        "salary_to": 200000,
+        "city": "Москва",
+        "requirement": "Самостоятельные и проактивные (думают наперед). Клиентоцентричные (стремление доставить ценность, а не задачу на бизнес-языке). Ты нам подходишь если у...",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/160",
+        "salary_from": 500000,
+        "salary_to": 1500000,
+        "city": "Алматы",
+        "requirement": "2–3 года уверенного коммерческого опыта с Vue.js (Vue 2 или 3 — обсудим). Понимание компонентного подхода, реактивности, Vuex / Pinia. ",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1002",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Минск",
+        "requirement": "Опыт работы с библиотекой React. Опыт работы с Redux + RTK, Tanstack Query или MobX. Базовые знания HTML, CSS, JavaScript...",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": 170000,
+        "salary_to": 190000,
+        "city": "Москва",
+        "requirement": "Обязательно имеешь опыт работы с Typescript. Имеешь опыт коммерческой разработки в команде от 1 года. Обладаешь отличными знаниями JavaScript (ES...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/2",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Санкт-Петербург",
+        "requirement": "Tailwind CSS, CSS preprocessors. Framer-motion. Уверенное знание JS, CSS, HTML. Опыт верстки по макетам Figma. Опыт работы с Redux...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/2",
+        "salary_from": 130000,
+        "salary_to": 160000,
+        "city": "Санкт-Петербург",
+        "requirement": "Ключевые навыки и знания: - Глубокое понимание нативного JavaScript (ES6+). - Опыт разработки на React.js (предпочтительно свежие версии). - ",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/84",
+        "salary_from": 80000,
+        "salary_to": 140000,
+        "city": "Ставрополь",
+        "requirement": "Глубокое знание React.js (TypeScript): понимание концепций компонентов, хуков, контекста, управления состоянием. Умение работать с Git. Понимание принципов ООП и SOLID. ",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/3",
+        "salary_from": 110000,
+        "salary_to": "Итоговая зарплата не указана",
+        "city": "Екатеринбург",
+        "requirement": "Образование высшее профильное. Знание python, linux. Умение строить sql запросы. Работа с унаследованным кодом Python. Понимание стека веб технологий (html...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/159",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Астана",
+        "requirement": "React. - Знание Git, Gitlab, Docker, Gitlab CI/CD.",
+        "work_format": "Удалённо"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1002",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Минск",
+        "requirement": "Отличное знание JavaScript (ES6+). Опыт коммерческой разработки на React от 2 лет. Уверенное владение HTML5, CSS3...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/63",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Саранск",
+        "requirement": "Знание современного HTML, CSS, а также JavaScript (ES6+) и TypeScript. Опыт коммерческой разработки на React, понимание подходов построения...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Хорошие знания C#, .NET, SQL. Опыт разработки высоконагруженных и масштабируемых сервисов. Умение писать unit-тесты (и понимание, зачем их нужно...",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/159",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Астана",
+        "requirement": "Уверенное владение React и TypeScript. Опыт работы с Redux Toolkit и RTK Query. Опыт работы с CSS Modules, SASS. ",
+        "work_format": "Удалённо"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": 300000,
+        "salary_to": "Итоговая зарплата не указана",
+        "city": "Москва",
+        "requirement": "Глубокое знание T-SQL (оптимизация запросов, анализ планов выполнения). Опыт администрирования MSSQL (репликация, резервное копирование, мониторинг). Навыки работы с SSIS...",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Опыт разработки консольных утилит. Отличное знание и применение Git, Gitlab, Github. Опыт работы с REST/gRPC. Понимание принципов устройства и...",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/160",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Алматы",
+        "requirement": "Уверенное владение HTML/CSS/JS. Уверенное владение JS (Ecmascript). Понимание того как строится адаптивная верстка. Знание фреймворков Vue.js/Nuxt.js. ",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Опыт коммерческой разработки от 1.5 года на позициях frontend-<highlighttext>разработчика</highlighttext>. Отличное знание JavaScript (ES6+), понимание современных стандартов. ",
+        "work_format": "Гибрид"
+    },
+    {
+        "name_vacancy": "Другое",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": 400000,
+        "salary_to": "Итоговая зарплата не указана",
+        "city": "Москва",
+        "requirement": "Опыт проведения глубинных интервью, опросов, кастдева. Умение говорить с клиентами на языке их боли и пользы. Системное мышление, способность структурировать...",
+        "work_format": "Гибрид"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Стартовая зарплата не указана",
+        "salary_to": 120000,
+        "city": "Москва",
+        "requirement": "Уверенное знание Python 3.x. Опыт работы с Django и Django REST Framework. Понимание принципов SOLID, KISS, DRY и интерес...",
+        "work_format": "Удалённо"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": 100000,
+        "salary_to": 150000,
+        "city": "Москва",
+        "requirement": "Опыт разработки фронтенда на React (функциональные компоненты) от 1 года. Знание Redux для управления состоянием (плюсом будет Redux Toolkit). ",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Грамотная устная и письменная речь. Умение структурировано и чётко излагать свои мысли. Желание развиваться в сфере ИТ, готовность к самообучению...",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/160",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Алматы",
+        "requirement": "1-2 года опыта в разработке на JavaScript. Опыт работы с React не менее 1 года. Уверенные знания JavaScript (ES...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": "Зарплата не указана",
+        "salary_to": "Зарплата не указана",
+        "city": "Москва",
+        "requirement": "Опыт разработки на java от 3 лет. Опыт работы с jpa и postgresql/jdbc. Опыт работы со kafka, spring boot. ",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/88",
+        "salary_from": 100000,
+        "salary_to": 200000,
+        "city": "Казань",
+        "requirement": "Уверенные знания HTML, CSS, SASS/SCSS, JavaScript/TypeScript, Git, http, RESTful, API, Angular (Версия 16+). Понимание основ web-разработки...",
+        "work_format": "На месте работодателя"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/1",
+        "salary_from": 200000,
+        "salary_to": 250000,
+        "city": "Москва",
+        "requirement": "Уверенное знание JavaScript (ES6+) и React.js. Опыт разработки SPA-приложений. Знание принципов ООП, паттернов проектирования. Опыт работы с...",
+        "work_format": "Не указано"
+    },
+    {
+        "name_vacancy": "Программист, разработчик",
+        "url": "https://api.hh.ru/areas/2",
+        "salary_from": 70000,
+        "salary_to": 110000,
+        "city": "Санкт-Петербург",
+        "requirement": "Опыт коммерческой разработки от 1 года. Владение Python 2/3. Владение (My)SQL, конкретно. Написать запросы, достаточные для CRUD (SELECT...",
+        "work_format": "Не указано"
     }
 ]
