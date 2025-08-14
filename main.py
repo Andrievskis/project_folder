@@ -1,35 +1,14 @@
 from typing import Any
 
+from config import ROOT_DIR
 from src.hh import HeadHunterAPI
 from src.json_saver import JSONSaver
 from src.vacancies_hh import Vacancy
 
-if __name__ == "__main__":
-    hh_api = HeadHunterAPI()
-    hh_vacancies = hh_api.receiving_vacancies("Python")
-    # print(hh_vacancies)
-    vacancies_list = Vacancy.receiving_vacancies_list(hh_vacancies)
-    print(vacancies_list)
-    vacancy = Vacancy(
-        "Python Developer",
-        "https://hh.ru/vacancy/123456",
-        "100000",
-        "300000",
-        "Москва",
-        "Знание основ программирования.",
-        "Удалённо",
-    )
 
-    # json_saver = JSONSaver()
-    # json_saver.add_vacancy(vacancy)
-    # print(json_saver.get_vacancy(vacancy))
-    # json_saver.delete_vacancy(vacancy)
-
-
-# Функция для взаимодействия с пользователем
 def user_interaction() -> Any:
     platform = HeadHunterAPI()
-    storage = JSONSaver("/Users/anastasiaandreeva/project_folder/data/vacancies.json")
+    storage = JSONSaver(f"{ROOT_DIR}/data/vacancies.json")
     while True:
         print("\n1. Ввести поисковый запрос")
         print("2. Получить топ N вакансий по зарплате")
