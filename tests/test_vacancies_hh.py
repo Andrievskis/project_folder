@@ -1,4 +1,6 @@
-from unittest import mock
+from unittest.mock import patch
+
+import pytest
 
 from src.vacancies_hh import Vacancy
 
@@ -10,6 +12,8 @@ def test_init() -> None:
     vacancy = Vacancy(
         name_vacancy="Python Developer",
         url="https://example.com",
+        name_companies="Z",
+        url_companies="https://example.com",
         salary_from=100000,
         salary_to=150000,
         city="Москва",
@@ -19,6 +23,8 @@ def test_init() -> None:
 
     assert vacancy.name_vacancy == "Python Developer"
     assert vacancy.url == "https://example.com"
+    assert vacancy.name_companies == "Z"
+    assert vacancy.url_companies == "https://example.com"
     assert vacancy.salary_from == 100000
     assert vacancy.salary_to == 150000
     assert vacancy.city == "Москва"
@@ -32,6 +38,8 @@ def test_repr() -> None:
     vacancy = Vacancy(
         name_vacancy="Python Developer",
         url="https://example.com",
+        name_companies="Z",
+        url_companies="https://example.com",
         salary_from=100000,
         salary_to=150000,
         city="Москва",
@@ -42,6 +50,8 @@ def test_repr() -> None:
     expected_output = (
         "\nНазвание вакансии: Python Developer\n"
         "Ссылка на вакансию: https://example.com\n"
+        "Название компании: Z\n"
+        "Ссылка на компанию: https://example.com\n"
         "Зарплата: 100000 - 150000\n"
         "Город: Москва\n"
         "Требования: Опыт от 3 лет\n"
@@ -54,11 +64,27 @@ def test_repr() -> None:
 def test_comparison() -> None:
     """Тест на сравнение вакансий."""
     vacancy1 = Vacancy(
-        "Python Developer", "https://example.com", 100000, 150000, "Москва", "Опыт от 3 лет", "Удаленная"
+        name_vacancy="Python Developer",
+        url="https://example.com",
+        name_companies="Z",
+        url_companies="https://example.com",
+        salary_from=100000,
+        salary_to=150000,
+        city="Москва",
+        requirement="Опыт от 3 лет",
+        work_format="Удаленная",
     )
 
     vacancy2 = Vacancy(
-        "Junior Developer", "https://example.com", 80000, 120000, "Москва", "Опыт от 1 года", "Удаленная"
+        name_vacancy="Python Developer",
+        url="https://example.com",
+        name_companies="Z",
+        url_companies="https://example.com",
+        salary_from=80000,
+        salary_to=120000,
+        city="Москва",
+        requirement="Опыт от 3 лет",
+        work_format="Удаленная",
     )
 
     assert vacancy2 < vacancy1
@@ -68,14 +94,34 @@ def test_comparison() -> None:
 def test_validate() -> None:
     """Тест на валидации."""
     try:
-        Vacancy("", "https://example.com", 100000, 150000, "Москва", "Опыт от 3 лет", "Удаленная")
+        Vacancy(
+            name_vacancy="",
+            url="https://example.com",
+            name_companies="Z",
+            url_companies="https://example.com",
+            salary_from=100000,
+            salary_to=150000,
+            city="Москва",
+            requirement="Опыт от 3 лет",
+            work_format="Удаленная",
+        )
     except ValueError:
         pass
     else:
         assert False, "Должен быть вызван ValueError при пустом названии"
 
     try:
-        Vacancy("Python Developer", "", 100000, 150000, "Москва", "Опыт от 3 лет", "Удаленная")
+        Vacancy(
+            name_vacancy="Python Developer",
+            url="",
+            name_companies="Z",
+            url_companies="https://example.com",
+            salary_from=100000,
+            salary_to=150000,
+            city="Москва",
+            requirement="Опыт от 3 лет",
+            work_format="Удаленная",
+        )
     except ValueError:
         pass
     else:
@@ -87,6 +133,8 @@ def test_to_dict() -> None:
     vacancy_data = {
         "name_vacancy": "Python Developer",
         "url": "https://example.com",
+        "name_companies": "Z",
+        "url_companies": "https://example.com",
         "salary_from": 100000,
         "salary_to": 150000,
         "city": "Москва",
@@ -99,6 +147,8 @@ def test_to_dict() -> None:
 
     assert result_dict["name_vacancy"] == "Python Developer"
     assert result_dict["url"] == "https://example.com"
+    assert result_dict["name_companies"] == "Z"
+    assert result_dict["url_companies"] == "https://example.com"
     assert result_dict["salary_from"] == 100000
     assert result_dict["salary_to"] == 150000
     assert result_dict["city"] == "Москва"
@@ -112,7 +162,7 @@ test_vacancies_list = [
         "area": {"url": "https://api.hh.ru/areas/160", "name": "Алматы"},
         "snippet": {
             "requirement": "Знание Git. Знание JS/HTML/CSS. Знание Vue.js, React, vite. "
-                           "Умение писать SQL. Умение подключать API, асинхронная подгрузка, кеширование. "
+            "Умение писать SQL. Умение подключать API, асинхронная подгрузка, кеширование. "
         },
         "work_format": [{"name": "На месте работодателя"}],
         "salary": {"from": None, "to": None},
@@ -122,7 +172,7 @@ test_vacancies_list = [
         "area": {"url": "https://api.hh.ru/areas/2759", "name": "Ташкент"},
         "snippet": {
             "requirement": "Минимум 2 года опыта в frontend web-разработке. "
-                           "Участие минимум в 5 реальных веб-проектах. Опыт работы с REST API. "
+            "Участие минимум в 5 реальных веб-проектах. Опыт работы с REST API. "
         },
         "work_format": [{"name": "На месте работодателя"}],
         "salary": {"from": 400, "to": 600},
@@ -130,36 +180,72 @@ test_vacancies_list = [
 ]
 
 
-def test_receiving_vacancies_list() -> None:
-    """Тест на получение списка вакансий."""
-    with mock.patch.object(Vacancy, "receiving_vacancies_list", return_value=[]):
-        empty_vacancies = Vacancy.receiving_vacancies_list([])
-        assert len(empty_vacancies) == 0
+@pytest.fixture
+def vacancies_data() -> list[dict]:
+    return [
+        {
+            "professional_roles": [{"name": "Программист, разработчик"}],
+            "area": {"url": "https://api.hh.ru/areas/160", "name": "Алматы"},
+            "employer": {"name": "Компания 1", "url": "https://company1.com"},
+            "snippet": {
+                "requirement": "Знание Git. Знание JS/HTML/CSS. Знание Vue.js, React, vite. "
+                "Умение писать SQL. Умение подключать API,"
+                " асинхронная подгрузка, кеширование."
+            },
+            "work_format": [{"name": "На месте работодателя"}],
+            "salary": {},
+        },
+        {
+            "professional_roles": [{"name": "Программист, разработчик"}],
+            "area": {"url": "https://api.hh.ru/areas/2759", "name": "Ташкент"},
+            "employer": {"name": "Компания 2", "url": "https://company2.com"},
+            "snippet": {
+                "requirement": "Минимум 2 года опыта в frontend web-разработке. "
+                "Участие минимум в 5 реальных "
+                "веб-проектах. Опыт работы с REST API."
+            },
+            "work_format": [{"name": "На месте работодателя"}],
+            "salary": {"from": 400, "to": 600},
+        },
+    ]
 
-    vacancies = Vacancy.receiving_vacancies_list(test_vacancies_list)
+
+def test_receiving_vacancies_list_empty() -> None:
+    with patch.object(Vacancy, "receiving_vacancies_list", return_value=[]):
+        vacancies = Vacancy.receiving_vacancies_list([])
+        assert len(vacancies) == 0
+
+
+def test_receiving_vacancies_list(vacancies_data: list[dict]) -> None:
+    vacancies = Vacancy.receiving_vacancies_list(vacancies_data)
     assert len(vacancies) == 2
 
+    # Проверка первой вакансии
     first_vacancy = vacancies[0]
     assert first_vacancy.name_vacancy == "Программист, разработчик"
     assert first_vacancy.url == "https://api.hh.ru/areas/160"
+    assert first_vacancy.name_companies == "Компания 1"
+    assert first_vacancy.url_companies == "https://company1.com"
     assert first_vacancy.city == "Алматы"
     assert first_vacancy.work_format == "На месте работодателя"
-    assert first_vacancy.salary_from == "Стартовая зарплата не указана"
-    assert first_vacancy.salary_to == "Итоговая зарплата не указана"
-    assert (
-        first_vacancy.requirement
-        == "Знание Git. Знание JS/HTML/CSS. Знание Vue.js, React, vite. Умение писать SQL. "
-           "Умение подключать API, асинхронная подгрузка, кеширование. "
+    assert first_vacancy.salary_from == "Зарплата не указана"
+    assert first_vacancy.salary_to == "Зарплата не указана"
+    assert first_vacancy.requirement == (
+        "Знание Git. Знание JS/HTML/CSS. Знание Vue.js, React, vite. Умение писать SQL. "
+        "Умение подключать API, асинхронная подгрузка, кеширование."
     )
 
+    # Проверка второй вакансии
     second_vacancy = vacancies[1]
     assert second_vacancy.name_vacancy == "Программист, разработчик"
     assert second_vacancy.url == "https://api.hh.ru/areas/2759"
+    assert second_vacancy.name_companies == "Компания 2"
+    assert second_vacancy.url_companies == "https://company2.com"
     assert second_vacancy.city == "Ташкент"
     assert second_vacancy.work_format == "На месте работодателя"
     assert second_vacancy.salary_from == 400
     assert second_vacancy.salary_to == 600
     assert second_vacancy.requirement == (
         "Минимум 2 года опыта в frontend web-разработке. "
-        "Участие минимум в 5 реальных веб-проектах. Опыт работы с REST API. "
+        "Участие минимум в 5 реальных веб-проектах. Опыт работы с REST API."
     )

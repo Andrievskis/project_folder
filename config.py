@@ -1,4 +1,22 @@
 from pathlib import Path
+from configparser import ConfigParser
+from typing import Dict
 
 CURRENT_FILE = Path(__file__).resolve()
 ROOT_DIR = CURRENT_FILE.parent
+
+
+def config(filename: str ="database.ini", section: str ="postgresql") -> Dict[str, str]:
+    # create a parser
+    parser = ConfigParser()
+    # read config file
+    parser.read(filename)
+    db = {}
+    if parser.has_section(section):
+        params = parser.items(section)
+        for param in params:
+            db[param[0]] = param[1]
+    else:
+        raise Exception(
+            'Section {0} is not found in the {1} file.'.format(section, filename))
+    return db
