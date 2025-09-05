@@ -44,7 +44,7 @@ class ExcelFile(BaseClass):
         """Метод для получения данных из файла по заданным критериям."""
         try:
             df = pd.read_excel(self.__filename, sheet_name=0)
-            return df.to_dict('records')
+            return df.to_dict("records")
         except FileNotFoundError:
             return []
 
@@ -63,19 +63,21 @@ class ExcelFile(BaseClass):
             print(f"Файл {self.__filename} не найден.")
 
 
-if __name__ == "__main__":
-    vacancy = Vacancy(
-        "Python Developer",
-        "https://hh.ru/vacancy/123456",
-        "50000",
-        "100000",
-        "Москва",
-        "Знание основ программирования.",
-        "Гибрид",
-    )
+# if __name__ == "__main__":
+#     vacancy = Vacancy(
+#         "Python Developer",
+#         "https://hh.ru/vacancy/123456",
+#         "S",
+#         "https://hh.ru/4567890",
+#         "50000",
+#         "100000",
+#         "Москва",
+#         "Знание основ программирования.",
+#         "Гибрид",
+#     )
 
-    # Сохранение информации о вакансиях в файл
-    # excel_saver = ExcelFile()
-    # excel_saver.add_vacancy(vacancy)
-    # print(excel_saver.get_vacancy(vacancy))
-    # excel_saver.delete_vacancy(vacancy)
+# Сохранение информации о вакансиях в файл
+# excel_saver = ExcelFile()
+# excel_saver.add_vacancy(vacancy)
+# print(excel_saver.get_vacancy(vacancy))
+# excel_saver.delete_vacancy(vacancy)

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
 class BaseApi(ABC):
@@ -16,6 +16,8 @@ class BaseApi(ABC):
         pass
 
     @abstractmethod
-    def receiving_vacancies(self, keyword: str, pages: int = 1) -> List[Dict]:
+    def receiving_vacancies(
+        self, keyword: Optional[str] = None, company_names: Optional[List[str]] = None, pages: int = 1
+    ) -> List[Dict]:
         """Метод получения вакансий."""
         pass
