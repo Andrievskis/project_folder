@@ -12,6 +12,8 @@ excel_file = ExcelFile("test_vacancies.xlsx")
 test_vacancy = Vacancy(
     "Python Developer",
     "https://hh.ru/vacancy/123456",
+    "S",
+    "https://hh.ru/4567890",
     "50000",
     "100000",
     "Москва",

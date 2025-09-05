@@ -8,7 +8,8 @@ from src.vacancies_hh import Vacancy
 
 class JSONSaver(BaseClass):
     """Класс, который реализовывает методы для добавления вакансий в файл,
-    получения данных из файла по указанным критериям и удаления информации о вакансиях. """
+    получения данных из файла по указанным критериям и удаления информации о вакансиях."""
+
     def __init__(self, file_path: str = "data/vacancies.json") -> None:
         self.__file_path = Path(file_path)
         if not self.__file_path.exists():

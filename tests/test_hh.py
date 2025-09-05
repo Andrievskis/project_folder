@@ -78,6 +78,6 @@ def test_receiving_vacancies_mock(hh_api: HeadHunterAPI) -> None:
     """Проверка через мокинг внутреннего метода."""
     with patch.object(hh_api, "_HeadHunterAPI__connect_to_api") as mock_connect:
         mock_connect.return_value = None
-        result = hh_api.receiving_vacancies("python", 1)
+        result = hh_api.receiving_vacancies("python", ["1"])
         mock_connect.assert_called_once_with("python", 1)
         assert result == []

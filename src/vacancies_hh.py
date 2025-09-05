@@ -3,14 +3,36 @@ from typing import Any, Dict, List
 
 class Vacancy:
     """Класс для работы с вакансиями."""
-    __slots__ = ('name_vacancy', 'url', 'salary_from', 'salary_to', 'city',
-                 'requirement', 'work_format')
-    list_vacancies: list['Vacancy'] = []
 
-    def __init__(self, name_vacancy: str, url: str, salary_from: Any, salary_to: Any,
-                 city: str, requirement: str, work_format: str):
+    __slots__ = (
+        "name_vacancy",
+        "url",
+        "name_companies",
+        "url_companies",
+        "salary_from",
+        "salary_to",
+        "city",
+        "requirement",
+        "work_format",
+    )
+    list_vacancies: list["Vacancy"] = []
+
+    def __init__(
+        self,
+        name_vacancy: str,
+        url: str,
+        name_companies: str,
+        url_companies: str,
+        salary_from: Any,
+        salary_to: Any,
+        city: str,
+        requirement: str,
+        work_format: str,
+    ):
         self.name_vacancy = name_vacancy
         self.url = url
+        self.name_companies = name_companies
+        self.url_companies = url_companies
         self.salary_from = salary_from
         self.salary_to = salary_to
         self.city = city
@@ -21,12 +43,16 @@ class Vacancy:
 
     def __repr__(self) -> str:
         """Строковое представление итоговой информации вакансий."""
-        return (f'\nНазвание вакансии: {self.name_vacancy}\n'
-                f'Ссылка на вакансию: {self.url}\n'
-                f'Зарплата: {self.salary_from} - {self.salary_to}\n'
-                f'Город: {self.city}\n'
-                f'Требования: {self.requirement}\n'
-                f'Формат работы: {self.work_format}\n')
+        return (
+            f"\nНазвание вакансии: {self.name_vacancy}\n"
+            f"Ссылка на вакансию: {self.url}\n"
+            f"Название компании: {self.name_companies}\n"
+            f"Ссылка на компанию: {self.url_companies}\n"
+            f"Зарплата: {self.salary_from} - {self.salary_to}\n"
+            f"Город: {self.city}\n"
+            f"Требования: {self.requirement}\n"
+            f"Формат работы: {self.work_format}\n"
+        )
 
     def __lt__(self, other: "Vacancy") -> Any:
         """Метод сравнения вакансий по минимальной зарплате"""
@@ -42,22 +68,34 @@ class Vacancy:
             raise ValueError("Название вакансии и URL обязательны.")
 
     @classmethod
-    def receiving_vacancies_list(cls, list_vacancies: List[Dict[str, Any]]) -> list['Vacancy']:
+    def receiving_vacancies_list(cls, list_vacancies: List[Dict[str, Any]]) -> list["Vacancy"]:
         """Метод получения данных по каждой вакансии."""
         cls.list_vacancies = []
         for vacancy in list_vacancies:
-            name_vacancy = vacancy['professional_roles'][0]['name'] if vacancy['professional_roles'] else 'Не указано'
-            url = vacancy['area']['url']
-            requirement = vacancy['snippet']['requirement']
-            work_format = vacancy['work_format'][0]['name'] if vacancy['work_format'] else 'Не указано'
-            city = vacancy['area']['name']
-            salary_from = vacancy['salary']['from'] if vacancy['salary'] else 'Зарплата не указана'
+            name_vacancy = vacancy["professional_roles"][0]["name"] if vacancy["professional_roles"] else "Не указано"
+            url = vacancy["area"]["url"]
+            name_companies = vacancy["employer"]["name"]
+            url_companies = vacancy["employer"].get("url", "alternate_url")
+            requirement = vacancy["snippet"]["requirement"]
+            work_format = vacancy["work_format"][0]["name"] if vacancy["work_format"] else "Не указано"
+            city = vacancy["area"]["name"]
+            salary_from = vacancy["salary"]["from"] if vacancy["salary"] else "Зарплата не указана"
             if not salary_from:
-                salary_from = 'Стартовая зарплата не указана'
-            salary_to = vacancy['salary']['to'] if vacancy['salary'] else 'Зарплата не указана'
+                salary_from = "Стартовая зарплата не указана"
+            salary_to = vacancy["salary"]["to"] if vacancy["salary"] else "Зарплата не указана"
             if not salary_to:
-                salary_to = 'Итоговая зарплата не указана'
-            cls(name_vacancy, url, salary_from, salary_to, city, requirement, work_format)
+                salary_to = "Итоговая зарплата не указана"
+            cls(
+                name_vacancy,
+                url,
+                name_companies,
+                url_companies,
+                salary_from,
+                salary_to,
+                city,
+                requirement,
+                work_format,
+            )
         return cls.list_vacancies
 
     @classmethod
@@ -65,19 +103,25 @@ class Vacancy:
         return cls(
             name_vacancy=data["name_vacancy"],
             url=data["url"],
+            name_companies=data["name_companies"],
+            url_companies=data["url_companies"],
             salary_from=data["salary_from"],
             salary_to=data["salary_to"],
             city=data["city"],
             requirement=data["requirement"],
-            work_format=data["work_format"]
+            work_format=data["work_format"],
         )
 
     def to_dict(self) -> Dict[str, Any]:
         """Преобразует экземпляр класса Vacancy в словарь."""
-        return {'name_vacancy': self.name_vacancy,
-                'url': self.url,
-                'salary_from': self.salary_from,
-                'salary_to': self.salary_to,
-                'city': self.city,
-                'requirement': self.requirement,
-                'work_format': self.work_format}
+        return {
+            "name_vacancy": self.name_vacancy,
+            "url": self.url,
+            "name_companies": self.name_companies,
+            "url_companies": self.url_companies,
+            "salary_from": self.salary_from,
+            "salary_to": self.salary_to,
+            "city": self.city,
+            "requirement": self.requirement,
+            "work_format": self.work_format,
+        }

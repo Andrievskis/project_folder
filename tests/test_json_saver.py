@@ -25,6 +25,8 @@ def vacancy1() -> Vacancy:
     return Vacancy(
         "Python Developer",
         "https://hh.ru/vacancy/123456",
+        "S",
+        "https://hh.ru/4567890",
         "100000",
         "300000",
         "Москва",
@@ -39,6 +41,8 @@ def vacancy2() -> Vacancy:
     return Vacancy(
         "Python",
         "https://hh.ru/vacancy/123789",
+        "S",
+        "https://hh.ru/4567890",
         "200000",
         "500000",
         "Екатеринбург",
